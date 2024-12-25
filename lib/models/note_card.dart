@@ -55,13 +55,25 @@ class NoteCard extends StatelessWidget {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Text(
+                    date,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 8),
               Text(
@@ -69,14 +81,6 @@ class NoteCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 14,
                   color: Colors.black54,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                date,
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: Colors.grey,
                 ),
               ),
             ],

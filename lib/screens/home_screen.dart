@@ -92,7 +92,12 @@ class _AllNoteScreenState extends State<AllNoteScreen> {
         onPressed: () => _navigateToCreateNote(),
         tooltip: 'Add a Note',
         backgroundColor: const Color(0xFF758694),
-        child: const Icon(Icons.add, size: 30, color: Colors.white),
+        child: const Image(
+            image: AssetImage('assets/noteAdd.png'), 
+            width: 40, 
+            height: 40,
+            color: Colors.white
+          ),
       ),
       body: SafeArea(
         child: Column(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note_taking_app/screens/home_screen.dart';
 
-
 class NoteTakingApp extends StatelessWidget {
   const NoteTakingApp({super.key});
 
@@ -22,12 +21,26 @@ class NoteTakingApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Title
-                const Text(
-                  'NOTE-TAKING APP',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                RichText(
+                  text: const TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'NOTE-TAKING ',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffA46D2D),
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'APP',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffF7E7DC),
+                        ),
+                      ),
+                    ],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -57,6 +70,7 @@ class NoteTakingApp extends StatelessWidget {
                   '"Shift from paper to digital, stay organized effortlessly."',
                   textAlign: TextAlign.center,
                   style: TextStyle(
+                    fontFamily: 'Playwrite',
                     fontSize: 14,
                     color: Color(0xFF758694),
                   ),
@@ -82,8 +96,9 @@ class NoteTakingApp extends StatelessWidget {
                         horizontal: 30, vertical: 10),
                   ),
                   child: const Text(
-                    'Get start →',
+                    'Get start',
                     style: TextStyle(
+                      fontFamily: 'Merriweather',
                       color: Colors.white,
                     ),
                   ),
@@ -96,4 +111,3 @@ class NoteTakingApp extends StatelessWidget {
     );
   }
 }
-
